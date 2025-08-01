@@ -33,7 +33,7 @@ resource "aws_security_group" "Jenkins-sg" {
 resource "aws_instance" "web" {
   ami                    = "ami-020cba7c55df1f615"
   instance_type          = "t2.large"
-  key_name               = "amikey"
+  key_name               = "demo-001"
   vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
   user_data              = templatefile("./install_jenkins.sh", {})
 
@@ -48,7 +48,7 @@ resource "aws_instance" "web" {
 resource "aws_instance" "web2" {
   ami                    = "ami-020cba7c55df1f615"
   instance_type          = "t2.large"
-  key_name               = "amikey"
+  key_name               = "demo-001"
   vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
   tags = {
     Name = "Monitering via grafana"
