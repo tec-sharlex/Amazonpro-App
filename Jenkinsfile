@@ -24,7 +24,7 @@ pipeline{
                     sh ''' $SCANNER_HOME/bin/sonar-scanner \
   -Dsonar.projectKey=Amazonpro7 \
   -Dsonar.sources=. \
-  -Dsonar.host.url=http://13.221.140.70:9000 \
+  -Dsonar.host.url=http://18.234.69.163:9000 \
   -Dsonar.login=sqp_4b4d468c31686bd15031b25424bb3a7826df78d1'''
                 }
             }
